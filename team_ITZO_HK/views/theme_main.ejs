@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+        <title>궁석궁석</title>
+        <link rel="stylesheet" href="../public/css/theme_main.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    </head>
+    <body>
+        <%- include('header')%>
+
+        <div class="themes_section">
+            <div class="tit">
+                <span class="main_tit">가고 싶은 장소의 테마는?</span>
+                <span class="sub_tit">서울에서 최애 장소를 찾아보세요!</span>
+            </div>
+            <div class="themes_choose">
+                <!-- <div class="color_bgcolor"></div> -->
+                <div class="theme_choose_part1">
+                    <div class="photo palace">
+                        <a href="/theme/palace">
+                            <img src="../public/img_theme/gyeongbokgung-palace.jpg" alt="고궁과 절 이미지" />
+                            <div class="text">고궁과 절</div>
+                        </a>
+                    </div>
+
+                    <div class="photo museum">
+                        <a href="/theme/museum">
+                            <img src="../public/img_theme/museum_theme.jpg" alt="실내공간 이미지" />
+                            <div class="text_list">
+                                <div class="text1">박물관</div>
+                                <div class="text2">미술관</div>
+                                <div class="text3">기념관</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="theme_choose_part2">
+                    <div class="photo">
+                        <a href="/theme/park">
+                            <img src="../public/img_theme/park_theme.jpg" alt="공원 이미지" />
+                            <div class="text">공원</div>
+                        </a>
+                    </div>
+
+                    <div class="photo">
+                        <a href="/theme/historical">
+                            <img src="../public/img_theme/historical_landmark.jpg" alt="역사적 명소 이미지" />
+                            <div class="text">역사적 명소</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('footer')%>
+
+        <script src="../public/js/theme_main.js"></script>
+    </body>
+</html>

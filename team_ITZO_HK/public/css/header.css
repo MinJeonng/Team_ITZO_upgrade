@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'),
+        url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'),
+        url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'intelone-mono-font-family-regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2')
+        format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    list-style: none;
+    line-height: 150%;
+    padding-left: constant(safe-area-inset-left);
+    padding-right: constant(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+body > * {
+    min-width: 300px;
+    box-sizing: border-box;
+}
+select option[value=''][disabled] {
+    display: none;
+}
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fefeed;
+    height: 80px;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+    transition: all 0.3s;
+    width: 100%;
+    min-width: 300px;
+    white-space: nowrap;
+
+    padding-top: calc(safe-area-inset-top + 10px);
+    padding-top: calc(safe-area-inset-top + 10px);
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.logo a {
+    color: black;
+}
+.logo > div:before {
+    content: '';
+    display: inline-block;
+    background-image: url('../img/icon/logo-10px.png');
+    background-position: center;
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.logo > div::after {
+    content: '';
+    display: inline-block;
+    background-image: url('../img/icon/logo-10px.png');
+    background-position: center;
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    min-width: 300px;
+}
+.nav > * {
+    padding: 10px;
+    font-size: 18px;
+}
+.nav a:not(.seledted) {
+    color: grey;
+}
+.nav > * :hover {
+    font-weight: bold;
+}
+.seledted {
+    color: black;
+    font-weight: bold;
+}

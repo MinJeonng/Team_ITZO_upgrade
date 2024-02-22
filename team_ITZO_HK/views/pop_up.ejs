@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+        <title>궁석궁석</title>
+        <link rel="stylesheet" href="../public/css/pop_up.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<%= process.env.KAKAO_APP_KEY%>"
+        ></script>    
+    </head>
+        <%- include('header')%>
+        <main>
+            <div class="container">
+                <div class="content_top">지역별 추천</div>
+                <div class="content_bottom">
+                    <div class="map-wrap hidden">
+                        <div id="map"></div>
+                    </div>
+                    <div class="keyword-wrap hidden">
+                        <div class="keyword-container">
+                            <div class="random_palace">
+                                <img class="random-palace-img" src="" alt="" />
+                                <div class="black"></div>
+                                <div class="click">고궁/절</div>
+                            </div>
+                            <div class="random_museum">
+                                <img class="random-museum-img" src="" alt="" />
+                                <div class="black"></div>
+                                <div class="click">박물관/미술관/기념관</div>
+                            </div>
+                            <div class="random_historical">
+                                <img class="random-historical-img" src="" alt="" />
+                                <div class="black"></div>
+                                <div class="click">역사적명소</div>
+                            </div>
+                            <div class="random_park">
+                                <img class="random-park-img" src="" alt="" />
+                                <div class="black"></div>
+                                <div class="click">공원</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="spinner"></div>
+                </div>
+            </div>
+        </main>
+        <%- include('footer')%>
+        <script type="module" src="../public/js/draw_map.js"></script>
+        <script type="module" src="../public/js/pop_up.js"></script>
+        <script type="module" src="../public/js/latlng.js"></script>
+    </body>
+</html>

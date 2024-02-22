@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+        <title>궁석궁석</title>
+        <!-- 사이트 이름이 정해지면 title모두 바꾸기 -->
+        <link rel="stylesheet" href="../public/css/map_recommand.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            .area {
+                position: absolute;
+                background: #fff;
+                border: 1px solid #888;
+                border-radius: 3px;
+                font-size: 12px;
+                top: -5px;
+                left: 15px;
+                padding: 2px;
+            }
+
+            .info {
+                font-size: 12px;
+                padding: 5px;
+            }
+            .info .title {
+                font-weight: bold;
+            }
+        </style>
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<%= process.env.KAKAO_APP_KEY%>"
+        ></script>
+    </head>
+    <body>
+        <%- include('header')%>
+
+        <main>
+            <div class="left-section">
+                <div><button type="button" class="reset-map">전체보기</button></div>
+                <div class="map-wrap">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="content-wrap">
+                    <div class="content-container">
+                        <div class="content-img-section">
+                            <img src="" alt="사진" />
+                        </div>
+                        <div class="content-preview-section">
+                            <div class="content-preview-header"></div>
+                            <div class="content-preview-address"></div>
+                            <div class="content-preview-tag"></div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <div class="content-img-section">
+                            <img src="" alt="사진" />
+                        </div>
+                        <div class="content-preview-section">
+                            <div class="content-preview-header"></div>
+                            <div class="content-preview-address"></div>
+                            <div class="content-preview-tag"></div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <div class="content-img-section">
+                            <img src="" alt="사진" />
+                        </div>
+                        <div class="content-preview-section">
+                            <div class="content-preview-header"></div>
+                            <div class="content-preview-address"></div>
+                            <div class="content-preview-tag"></div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <div class="content-img-section">
+                            <img src="" alt="사진" />
+                        </div>
+                        <div class="content-preview-section">
+                            <div class="content-preview-header"></div>
+                            <div class="content-preview-address"></div>
+                            <div class="content-preview-tag"></div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <div class="content-img-section">
+                            <img src="" alt="사진" />
+                        </div>
+                        <div class="content-preview-section">
+                            <div class="content-preview-header"></div>
+                            <div class="content-preview-address"></div>
+                            <div class="content-preview-tag"></div>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <div class="content-img-section">
+                            <img src="" alt="사진" />
+                        </div>
+                        <div class="content-preview-section">
+                            <div class="content-preview-header"></div>
+                            <div class="content-preview-address"></div>
+                            <div class="content-preview-tag"></div>
+                        </div>
+                    </div>
+                    <div class="page-numbering"></div>
+                </div>
+            </div>
+        </main>
+        <%- include('footer')%>
+        <script type="module" src="../public/js/draw_map_recommand.js"></script>
+        <script type="module" src="../public/js/map_recommand.js"></script>
+        <script type="module" src="../public/js/latlng.js"></script>
+    </body>
+</html>

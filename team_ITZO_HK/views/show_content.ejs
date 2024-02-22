@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+        <title>궁석궁석</title>
+        <!-- 사이트 이름이 정해지면 title모두 바꾸기 -->
+        <link rel="stylesheet" href="../public/css/show_content.css" />
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=<%= process.env.KAKAO_APP_KEY%>"
+        ></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <%- include('header')%>
+
+        <main>
+            <div class="container">
+                <div class="header">
+                    <div class="title"></div>
+                    <div class="title-address"></div>
+                    <div class="sub-title"></div>
+                </div>
+                <div class="content">
+                    <div class="content-section1">
+                        <div class="img-section">
+                            <img src="" alt="" />
+                            <div class="copyright"></div>
+                            <div id="map"></div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-head">상세정보</div>
+                            <div class="detail-bottom">
+                                <div class="detail-explanation"></div>
+                                <input type="checkbox" class="detail-explanation-more-btn" />
+                                <div class="detail-information">
+                                    <div>
+                                        <div>
+                                            <div>&nbsp 문의 및 안내</div>
+                                            <div class="tel"></div>
+                                        </div>
+                                        <div>
+                                            <div>&nbsp 홈페이지</div>
+                                            <div class="homepage"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>&nbsp 주소</div>
+                                            <div class="address"></div>
+                                        </div>
+                                        <div>
+                                            <div>&nbsp 이용시간</div>
+                                            <div class="op-time"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <div>&nbsp 주차</div>
+                                            <div class="parking"></div>
+                                        </div>
+                                        <div>
+                                            <div>&nbsp 요금</div>
+                                            <div class="price"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-section2"></div>
+                    <div class="content-section3"></div>
+                </div>
+            </div>
+        </main>
+        <%- include('footer')%>
+        <script type="module" src="../public/js/content_object.js"></script>
+        <script type="module" src="../public/js/show_content.js"></script>
+        <script type="module" src="../public/js/latlng.js"></script>
+    </body>
+</html>

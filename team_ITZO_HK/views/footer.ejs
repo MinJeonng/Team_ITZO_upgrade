@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../public/css/footer.css" />
+
+        <title>Document</title>
+    </head>
+    <body>
+        <footer>
+            <div class="footer_section1">
+                <span class="footLogo"> <span class="team">Team</span>ITZO </span>
+            </div>
+            <div class="footer_section2">
+                <div class="sel_member">
+                    <select name="관광정보 선택" id="relation2" required>
+                        <option value="" class="default" disabled selected>관광정보</option>
+                        <option value="https://knto.or.kr/index" title="새창">관광불편신고센터</option>
+                        <option
+                            value="https://korean1.visitkorea.or.kr/kor/tt/pr_gallery/new_photo_gallery/main/main_ssot.jsp"
+                            title="새창"
+                        >
+                            관광사진갤러리
+                        </option>
+                        <option value="https://www.templestay.com/" title="새창">템플스테이</option>
+                        <option value="https://api.visitkorea.or.kr/#/" title="새창">TourAPI4.0</option>
+                    </select>
+
+                    <button class="link_view" title="선택관광정보로 새창 열림" onclick="goRelation2()">이동</button>
+                </div>
+                <div class="sel_member">
+                    <select name="유관기관 선택" id="relation" required>
+                        <option value="" class="default" disabled selected>유관기관</option>
+                        <option value="http://www.mmca.go.kr" title="새창">국립현대미술관</option>
+                        <option value="http://www.seoulwelcome.com" title="새창">서울관광재단</option>
+                        <option value="https://www.museum.go.kr/site/main/home" title="새창">국립중앙박물관</option>
+                        <option value="https://www.mcst.go.kr/kor/main.jsp" title="새창">문화체육관광부</option>
+                        <option value="https://www.culture.go.kr/wday/index.do" title="새창">문화가 있는 날</option>
+                        <option value="http://mfis.mpva.go.kr/" title="새창">현충시설정보서비스</option>
+                        <option value="https://parks.seoul.go.kr/template/sub/naksan.do" title="새창">
+                            서울의 공원
+                        </option>
+                    </select>
+                    <button class="link_view" title="유관기관으로 새창 열림" onclick="goRelation()">이동</button>
+                </div>
+            </div>
+            <div class="footer_section3">
+                <div>
+                    <a href="https://api.visitkorea.or.kr/#/" target="_blank" title="새창">
+                        <img
+                            class="img1"
+                            src="https://korean.visitkorea.or.kr/resources/images/common/logo_foot_api.png?v=20230601001"
+                            alt="TourAPI 4.0"
+                        />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://knto.or.kr/index" target="_blank" title="새창">
+                        <img
+                            class="img2"
+                            src="https://cdn.visitkorea.or.kr/resources/images/common/logo_foot_gg.png"
+                            alt="한국관광공사"
+                        />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://korean.visitkorea.or.kr/main/main.do" target="_blank" title="새창">
+                        <img class="img3" src="../public/img/icon/logo-guseogguseog.jpeg" alt="대한민국구석구석" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <div class="go-to-top">
+            <a href="#" class="btn_top_move"></a>
+        </div>
+        <script src="../public/js/footer.js"></script>
+    </body>
+</html>

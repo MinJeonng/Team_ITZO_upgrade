@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+        <title>궁석궁석</title>
+        <link rel="stylesheet" href="../public/css/random_recommand.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+         <%- include('header')%>
+
+        <main>
+            <div class="container">
+                <div class="random_total">
+                    <img class="random-img" src="" alt="" />
+                    <div class="black"></div>
+                    <div class="click">랜덤추천</div>
+                </div>
+                <div class="random_map">
+                    <img class="random-map-img" src="" alt="" />
+                    <div class="black"></div>
+                    <div class="click">지역별 랜덤추천</div>
+                </div>
+                <div class="random_keyword">
+                    <img class="random-keyword-img" src="" alt="" />
+                    <div class="black"></div>
+                    <div class="click">키워드별 랜덤추천</div>
+                </div>
+            </div>
+        </main>
+        <%- include('footer')%>
+
+        <script type="module" src="../public/js/content_object.js"></script>
+        <script type="module" src="../public/js/random_recommand.js"></script>
+    </body>
+</html>

@@ -1,0 +1,595 @@
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'),
+        url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'),
+        url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'intelone-mono-font-family-regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2')
+        format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'NanumBarunGothic';
+}
+body {
+    background-color: #001d49;
+}
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fefeed;
+    height: 80px;
+    text-align: center;
+    padding: 10px;
+    min-width: 300px;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.logo a {
+    color: black;
+}
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+.nav > * {
+    padding: 10px;
+}
+.nav a {
+    color: black;
+}
+.contents {
+    width: 100%;
+    padding: 135px 91px 30px;
+    margin: 0 auto;
+    min-height: 90vh;
+    min-width: 300px;
+
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+.btn_refresh {
+    overflow: hidden;
+    position: absolute;
+    right: 17px;
+    top: 15px;
+    width: 23px;
+    height: 23px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_refresh_mtag.png) 0 0 / 100% 100% no-repeat;
+    text-indent: -999px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.contents .hashtag_section {
+    width: 100%;
+    height: 140px;
+
+    position: relative;
+    display: flex; /* Flexbox 사용 선언 */
+    justify-content: center; /* 가로축 가운데 정렬 */
+    align-items: center; /* 세로축 가운데 정렬 */
+}
+.color_bgcolor {
+    width: 100%;
+    height: 140px;
+    background-color: #fefeed;
+    opacity: 0.86;
+    position: absolute;
+}
+.color_bgcolor,
+.btn_refresh {
+    position: absolute;
+}
+
+.contents .hashtag_section .buttons {
+    margin: 0 30px;
+    padding: 12px 0;
+    position: relative;
+    z-index: 30;
+    cursor: pointer;
+}
+.contents .hashtag_section .buttons button {
+    padding: 5px 10px;
+    height: auto;
+    /* border-radius: 20px; */
+    margin-right: 5px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    /* background-color: gray; */
+
+    /* font-size: 1em; */
+}
+button {
+    border-radius: 10px;
+    border: 1.3px solid rgb(146, 143, 143);
+    background-color: rgb(181, 180, 180);
+    cursor: pointer;
+}
+.content-wrap {
+    margin-top: 15px;
+    border-top: 2px solid #999;
+    width: 100%;
+    padding-left: 0;
+    /* position: relative; */
+    /* border-bottom: 2px solid #999; */
+}
+
+.content-wrap > li {
+    padding: 20px 10px;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 5px 0 5px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+.content-wrap > li .content-img-section {
+    float: left;
+    position: relative;
+    width: 140px;
+    height: 94px;
+}
+.content-img-section img {
+    width: 140px;
+    height: 94px;
+    vertical-align: middle;
+}
+.content-wrap > li .content-preview-section {
+    padding-left: 178px !important;
+    padding-right: 20px;
+    color: rgb(244, 244, 234);
+}
+.content-wrap > li .content-preview-section .content-preview-header {
+    display: flex;
+    margin-top: -5px;
+    padding-bottom: 5px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.content-wrap > li .content-preview-section .content-preview-address {
+    display: flex;
+    margin-top: 28px;
+    /* padding-bottom : 5px; */
+    font-size: 14px;
+    color: rgb(212, 210, 210);
+}
+.content-wrap > li .content-preview-section .content-preview-tag {
+    display: flex;
+    margin-top: 14px;
+    font-size: 14px;
+    color: rgb(212, 210, 210);
+}
+
+/* footer 부분 (가장 하단 부분) */
+/* box-sizing: border-box;  이거 꼭 bottom만이라도 적용해주기*/
+.bottom {
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    height: auto;
+    padding: 0;
+    height: 65px;
+
+    background: #f0f0f0;
+    overflow: hidden;
+}
+.bottom .sel_area {
+    padding: 0 15px 6px;
+    position: static;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+.bottom .sel_area .sel_member {
+    position: relative;
+    background: none;
+    border: 0;
+    width: 500px;
+}
+.bottom .sel_area .sel_member select {
+    background: #fff url(https://korean.visitkorea.or.kr/resources/images/main/ico_select5.png) 100% 50%/30px 8px
+        no-repeat;
+    padding: 0 0 0 15px;
+    height: 35px;
+    /* width: 100%; */
+    width: calc(100% - 65px);
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 18px;
+    border: 1px solid #bbb;
+    color: #666;
+    vertical-align: top;
+}
+/* 화살표 사라지기 */
+select {
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    -moz-appearance: none; /* Firefox */
+    appearance: none; /* 일반적인 스타일링을 위한 appearance 속성 */
+    background-image: none; /* 배경 이미지 제거 */
+    padding-right: 1em; /* 오른쪽 여백을 추가하여 텍스트와 겹치지 않게 함 */
+    background-color: transparent; /* 배경색을 투명하게 설정 */
+}
+
+.sel_area .sel_member button {
+    width: 50px;
+    font-size: 14px;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    background: #777676;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+    /* position: absolute; */
+    right: 0;
+    top: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: #f0f0f0;
+    padding: 39px 142px 5px;
+    position: relative;
+}
+.footer2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.footLogo {
+    font-size: 20px;
+    font-family: 'intelone-mono-font-family-regular';
+    display: flex;
+    left: -88px;
+    position: relative;
+}
+.team {
+    font-family: 'intelone-mono-font-family-regular';
+    font-size: 14px;
+}
+.img1,
+.img3,
+.img2 {
+    width: 115px;
+    height: 30px;
+    padding-left: 20px;
+}
+.footer .logo_list {
+    flex-direction: row;
+    display: flex;
+    padding-left: 6px;
+}
+
+.logo_list > a {
+    cursor: pointer;
+}
+
+.hashtag-btn-open-modal,
+.hashtag-btn-close-modal,
+.selectedHashtag,
+.hashtag_list {
+    visibility: hidden;
+}
+.modal {
+    display: none;
+}
+
+/*  */
+/*  */
+.page-numbering {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    text-align: center;
+    padding-left: 6px;
+}
+
+.hide {
+    display: none;
+}
+.hashtag.active {
+    background-color: #50617d;
+
+    color: aliceblue;
+}
+.all_btn_active {
+    background-color: #50617d;
+    color: aliceblue;
+}
+
+@media screen and (max-width: 990px) {
+    div {
+        box-sizing: border-box;
+    }
+    body {
+        overflow: scroll;
+    }
+
+    .contents .hashtag_section {
+        width: 100%;
+        height: 350px;
+        position: relative;
+    }
+    .color_bgcolor {
+        width: 100%;
+        height: 350px;
+        background-color: #fefeed;
+        opacity: 0.86;
+        position: absolute;
+    }
+
+    .btn_refresh {
+        position: absolute;
+    }
+    .contents .hashtag_section .buttons {
+        margin: 0 30px;
+        padding: 12px 0;
+        position: relative;
+        z-index: 30;
+    }
+    .contents .hashtag_section .buttons button {
+        padding: 5px 10px;
+        height: auto;
+        border-radius: 20px;
+        margin-right: 5px;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    div {
+        box-sizing: border-box;
+    }
+    body {
+        overflow: scroll;
+    }
+    header {
+        flex-direction: column;
+        height: 100px;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .logo {
+        width: 100%;
+    }
+    .nav {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    body {
+        overflow: scroll;
+    }
+
+    .content-img-section {
+        width: 40%;
+        height: 40%;
+    }
+}
+/* footer 부분 할때 이 반응형도 추가해주세요.(1080px부분) */
+@media screen and (max-width: 1080px) {
+    .footer2 {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+    }
+    .logo_list,
+    .sel_area {
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 680px) {
+    .footer2 {
+        display: none !important;
+    }
+    .footer {
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+}
+/* 모달부분 */
+@media screen and (max-width: 576px) {
+    .hashtag_section {
+        display: none !important;
+    }
+    .contents {
+        padding: 117px 0 30px;
+        line-height: 120%;
+    }
+    .hashtag-btn-open-modal,
+    .hashtag-btn-close-modal,
+    .modal,
+    .selectedHashtag,
+    .hashtag_list {
+        visibility: visible !important;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 250px;
+        /* max-height: 60%; */
+        height: 450px;
+        text-align: center;
+        z-index: 99999;
+        width: 200px;
+        /* max-height: 70%; */
+    }
+
+    .modal_wrap {
+        width: 250px;
+        /* max-height: 60%; */
+        height: 100%;
+        text-align: center;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    }
+
+    .modal .hashtag-btn-close-modal {
+        width: 30px;
+        height: 30px;
+        font-size: 0;
+        position: absolute;
+        top: 14px;
+        right: 10px;
+        border-radius: 100%;
+        background: #fff
+            url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA9ElEQVQokW3RzSpFURjG8d/ZxZm4AMZ7JUMZOfIxk6mUG1ByHwbnFsicKEmMDIxkYColXo5roHyFbXDW1k5njdbzvP/19PSuVlmWU9jBU0SsGHBSSgdIWC+wgTF0UkqHA+B9zGIUGwU2cZfnnQzU8C7msnzEZquqKimlYZxhPA+P8YW64gMWI+KtVVVVndbGESb/tbrGckS8wt+DRo0e2ll+IEXEdz0v/sFbGGpYw9huMs1Ke1jI/hV+MJ31RUSsQqssyxH9f6jhiIj5HHKOiexfYq1AtwH3sNhosIT7fJ9Bt8ApnnGrv7r3mo6Izxxwgxec/AI/vVAviXw4ggAAAABJRU5ErkJggg==)
+            no-repeat 50%;
+    }
+    .btn_refresh {
+        /* overflow: hidden; */
+        position: absolute;
+        left: 17px;
+        top: 18px;
+        width: 23px;
+        height: 23px;
+        background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_refresh_mtag.png) 0 0 / 100% 100%
+            no-repeat;
+        text-indent: -999px;
+        border: none;
+        border-radius: 0;
+    }
+    .modal .modal-head .title {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 500;
+        background-color: rgb(33, 144, 241);
+        width: 100%;
+        height: 56px;
+        border-radius: 20px 20px 0 0;
+        display: inline-block;
+        padding-top: 21px;
+    }
+    .modal-body {
+        padding: 30px 30px 0;
+        min-height: 50px;
+        height: calc(100% - 130px);
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    .body-wrap {
+        vertical-align: top;
+        overflow: hidden;
+    }
+    .hashtag-btn {
+        min-width: 130px;
+        margin-right: 10px;
+        display: inline-block;
+
+        max-width: 290px;
+        float: none;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .hashtag-btn > * {
+        margin-bottom: 5px;
+        display: block;
+        margin-bottom: 10px;
+        min-width: 130px;
+        transition: all 0.1s;
+        box-sizing: border-box;
+        width: 155px;
+        line-height: 17px;
+        word-break: break-all;
+        min-height: 32px;
+        padding: 6px 13px;
+    }
+    .modal-foot {
+        padding: 20px 0;
+        height: 70px;
+        box-sizing: border-box;
+    }
+    .confirm {
+        background-color: #5f8cdd !important;
+        color: #fff !important;
+    }
+    .btn-foot {
+        background-color: #949494;
+        color: #fff;
+        padding: 3px 13px;
+        border-radius: 10px;
+        vertical-align: middle;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .section_hashtag {
+        display: flex;
+        position: relative;
+        /* display: inline-block; */
+        justify-content: space-between;
+    }
+    .selectedHashtag {
+        position: absolute;
+        color: #a1bdc3;
+        width: 285px;
+        height: 40px;
+
+        top: 12px;
+        left: 163px;
+    }
+    p {
+        white-space: pre;
+        font-size: 16px;
+    }
+
+    .hashtag-btn-open-modal {
+        background: whitesmoke;
+
+        position: relative;
+
+        left: 10px;
+        padding: 10px 15px;
+        border-radius: 15px;
+
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.25s;
+        border: 3px solid aliceblue;
+        color: #1e6b7b;
+    }
+    .hashtag-btn-open-modal:hover {
+        background-color: rgb(185, 218, 247);
+        color: #1e6b7b;
+        letter-spacing: 2px;
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,306 @@
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'),
+        url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'),
+        url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'intelone-mono-font-family-regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2')
+        format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+/* 테마선택하세요 폰트 */
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2')
+        format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'NanumBarunGothic';
+}
+body {
+    overflow: auto;
+    background-color: #001d49;
+    display: flex;
+    flex-direction: column;
+}
+select option[value=''][disabled] {
+    display: none;
+}
+
+.themes_section .tit {
+    width: 100%;
+    margin: 0;
+    left: 0;
+    top: 100px;
+    position: static;
+    padding: 114px 0 0;
+    background-color: #f8f8e4;
+    /* background-color: #fefeed; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    /* min-width: 300px; */
+}
+.tit > span {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 20px 0;
+
+    font-family: 'NanumSquareNeo-Variable';
+}
+.main_tit {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px 0 0 20px;
+    color: #001e46;
+}
+.sub_tit {
+    font-size: 15px;
+    margin-top: -14px;
+    font-weight: 100;
+    color: #4c6688;
+}
+
+.themes_section .themes_choose {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+}
+.themes_choose > * {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.themes_choose > * a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 100%;
+}
+.bg_color {
+    width: 100%;
+    height: 100%;
+    background-color: #fefeed;
+    opacity: 0.86;
+    position: absolute;
+}
+.text_list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: bold;
+}
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.text1 {
+    top: 44%;
+}
+
+.text2 {
+    top: 50%;
+    padding: 8px 0;
+}
+
+.text3 {
+    top: 56%;
+}
+
+.photo img {
+    width: calc(100vw / 4);
+    height: 100%;
+    /* height: 610px; */
+    /* width: 100%; */
+    /* opacity: 0.8; */
+}
+
+.zoom_img {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+/* .zoom_text {
+    font-size: 28px;
+    transition: all 0.2s;
+} */
+
+button {
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+@media screen and (max-width: 900px) {
+    div {
+        box-sizing: border-box;
+    }
+    body {
+        overflow: scroll;
+    }
+    .themes_choose > * {
+        width: 100%;
+        height: 50%;
+    }
+    .photo {
+        /* width: 200px;
+        height: 200px; */
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        padding: 0;
+        /* opacity: 0.8; */
+    }
+
+    .photo img {
+        /* width: 200px;
+        height: 200px; */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        /* opacity: 0.8; */
+    }
+    .themes_section {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .themes_section .themes_choose {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: calc(100vh - 210px);
+        /* justify-content: center; */
+        /* position: absolute; */
+
+        flex-wrap: wrap;
+    }
+    .photo {
+        position: relative;
+        /* overflow: hidden; */
+    }
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: whitesmoke;
+        font-size: 19px;
+        font-weight: bold;
+    }
+    .text_list {
+        font-size: 19px;
+        font-weight: bold;
+    }
+    .text1 {
+        top: 40%;
+    }
+
+    .text2 {
+        top: 50%;
+    }
+
+    .text3 {
+        top: 60%;
+    }
+
+    .zoom_img {
+        transform: scale(1.05);
+        transition: transform 0.2s;
+    }
+    .zoom_text {
+        font-size: 25px;
+        transition: all 0.2s;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+}
+@media screen and (max-width: 300px) {
+    .photo {
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+        padding: 0;
+        /* opacity: 0.8; */
+        min-width: 300px;
+        position: relative;
+    }
+    .themes_section {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .themes_section .themes_choose {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .photo img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        /* opacity: 0.8; */
+        min-width: 300px;
+    }
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: whitesmoke;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 450px) {
+    .main_tit {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 20px 0 0 20px;
+        color: #001e46;
+    }
+    .sub_tit {
+        font-size: 13px;
+        margin-top: -14px;
+        font-weight: 100;
+        color: #4c6688;
+    }
+}
